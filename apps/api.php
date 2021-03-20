@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/app.php';
 include_once __DIR__ . '/val.php';
-include_once __DIR__ . '/fxn.php';
 
 $app = new LAM_SHOP();
 $crud = new sqlOps();
