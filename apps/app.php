@@ -101,6 +101,16 @@ class LAM_SHOP extends sqlOps {
 		if($items){return $items;} else return false;
 	}
 
+	// Get users
+	public function getUsers(){
+		$table = "tbl_users"; 
+		$col = "*"; 
+		$where = "WHERE status = '1' AND `user_level` = '2'"; 
+		$orderby = "ORDER BY sn DESC";
+		$items = $this->conn->select_f($table,$col,$where,$orderby); 
+		if($items){return $items;} else return false;
+	}
+	
 	// Get orders
 	public function getUserOrders($email){
 		$table = "tbl_orders"; 
