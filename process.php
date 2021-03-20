@@ -15,9 +15,7 @@ if ($form == 1){
     $where = "WHERE `order_id` = '{$oid}' AND `user_email` = '$email'";
     $update = $crud->update($table,$colVals,$where);
     if($update){
-        if ($shoot = $crud->shoot_mail($email)){
-            session_destroy();
-        } else{session_destroy();} ?>
+        session_destroy(); ?>
         <script type="text/javascript">
             alert('Purchase Successful! Check your email for your book!'); 
             window.location = "./";
